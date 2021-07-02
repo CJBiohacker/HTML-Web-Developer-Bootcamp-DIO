@@ -1,0 +1,22 @@
+body {
+    background: #fcfcfc ;
+}
+
+#title, .subtitle {
+    color: rgb(95, 11, 43);
+}
+
+.post {
+    background: #fff;   /* Cor de fundo da área do elemento */
+    padding: 15px;  /* Área de preenchimento entre a borda e o conteúdo */
+    border: 3px solid rgb(5, 41, 75); /* Espessura, estilo e cor da borda */
+    margin: 0px 0px 15px 0px;    /* Espaçamento entre os elementos à sua volta. Neste caso tamanho/distância ↑, →, ↓ e ←. */
+    color: rgb(255, 0, 0);    /* Cor do conteúdo da classe(caractéres) */
+}
+
+.post_title {   /* O post title por ser uma classe do h3 que está contido dentro do article, leva prioridade na estilização CSS.*/
+    margin: 0 0 15px 0;
+    font-size: 16px;    /* Tamanho da fonte do conteúdo da classe(caractéres) */
+    font-style: italic; /* Formatação de fonte do conteúdo da classe(caractéres) */
+
+}
