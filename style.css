@@ -3,7 +3,6 @@ body {
     font-family: 'JetBrains Mono';
     max-width: 1080px; /* Define à largura máxima do conteúdo baseado no ajuste da tela(zoom e console) */
     margin: auto;
-    text-align: justify;
 }
 
 #profile-photo {
@@ -35,7 +34,7 @@ body {
 }
 
 p {
-
+    text-align: justify;
 }
 
 .html-img {
