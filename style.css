@@ -1,6 +1,9 @@
 body {
     background: #fcfcfc ;
     font-family: 'JetBrains Mono';
+    max-width: 1080px; /* Define à largura máxima do conteúdo baseado no ajuste da tela(zoom e console) */
+    margin: auto;
+    text-align: justify;
 }
 
 #profile-photo {
@@ -11,7 +14,7 @@ body {
 
 #title, .subtitle {
     color: rgb(153, 20, 71);
-    margin: 10px 15px ;
+    margin: 10px 15px;
     text-transform: uppercase;
 }
 
@@ -31,8 +34,13 @@ body {
     font-style: italic; /* Formatação de fonte do conteúdo da classe(caractéres) */
 }
 
+p {
+
+}
+
 .html-img {
     border-radius: 5px;
+    width: 100%;
 }
 
 #second-P {
@@ -41,4 +49,9 @@ body {
 
 footer {
     font-style: italic;
+}
+
+.list-style {
+    list-style:none;
+    padding-left: 15px;
 }
