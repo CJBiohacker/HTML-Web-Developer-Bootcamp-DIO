@@ -1,6 +1,4 @@
-@charset "UTF-8";
 * {
-  /* Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc. */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -12,17 +10,123 @@
 
 body {
   max-width: 100%;
+  min-height: 100vh;
+  background: #f3f1f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+body .instagram-page {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 60%;
+  height: 100vh;
+}
+body .instagram-page .phone-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
 }
 body .instagram-page .phone-box .phone {
-  max-width: 45%;
-  margin-left: 15%;
+  height: 45rem;
 }
-body .instagram-page .login-box .logo {
-  max-width: 12%;
+body .instagram-page .side-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
 }
-body .instagram-page .login-box .profile-photo {
-  max-width: 7%;
+body .instagram-page .side-box .login-box {
+  border: 1px solid #DBDBDB;
+  background: #f4f4f4;
+  padding: 35px 81px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 0 0 10px 0;
+}
+body .instagram-page .side-box .login-box .logo {
+  display: flex;
+  align-items: center;
+}
+body .instagram-page .side-box .login-box .profile-photo {
   border-radius: 50%;
+  max-width: 12vh;
+  margin: 20px 0 35px;
+  overflow: hidden;
+}
+body .instagram-page .side-box .login-box .login-button {
+  font-size: 14px;
+  font-weight: bold;
+  background: #0095F6;
+  color: white;
+  margin-bottom: 10px;
+  border: 3px solid #0095F6;
+  border-radius: 5px;
+  width: 106%;
+  height: 4vh;
+}
+body .instagram-page .side-box .login-box .removeacc-button {
+  font-size: 14px;
+  font-weight: bold;
+  background: #f3f1f1;
+  color: #0095F6;
+  margin-bottom: 10px;
+  border: 3px solid #f3f1f1;
+  border-radius: 5px;
+  width: 106%;
+  height: 4vh;
+}
+body .instagram-page .side-box .signup-box {
+  border: 1px solid #DBDBDB;
+  padding: 30px 90px 25px;
+  background: #f4f4f4;
+}
+body .instagram-page .side-box .signup-box .not-user {
+  font-size: 14px;
+  color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+body .instagram-page .side-box .signup-box .user-option {
+  color: grey;
+}
+body .instagram-page .side-box .signup-box .user-option .switch-acc {
+  font-size: 14px;
+  color: #0095F6;
+  font-weight: bold;
+}
+body .instagram-page .side-box .signup-box .user-option .remove-acc {
+  font-size: 14px;
+  color: #0095F6;
+  font-weight: bold;
+}
+body .instagram-page .side-box .getapp-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vh;
+  margin-top: 20px;
+}
+body .instagram-page .side-box .getapp-box .get-app {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+body .instagram-page .side-box .getapp-box .download .appstore-logo {
+  width: 20vh;
+  margin: 0 3px 0 0;
+}
+body .instagram-page .side-box .getapp-box .download .googleplay-logo {
+  width: 20vh;
+  margin: 0 0 0 3px;
 }
 
 /*# sourceMappingURL=instagram-style.css.map */

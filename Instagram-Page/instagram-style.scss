@@ -1,4 +1,4 @@
-* { /* Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc. */
+* { // Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc.
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,58 +10,141 @@
 
 body {
     max-width: 100%;
-    
-    .instagram-page {
+    min-height: 100vh;
+    background:#f3f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 
+    .instagram-page {
+        display: flex; // Organiza os itens do "container" em sequência/fila/linha.
+        align-items: center;    
+        justify-content: start;
+        width: 60%;
+        height: 100vh;
+            
         .phone-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45%;
 
             .phone {
-                max-width: 45%;
-                margin-left: 15%;
+                height: 45rem;
+                
             }
         }
+        .side-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+            width: 50%;
 
-        .login-box {
-
-            .logo {
-                max-width: 12%;
+            .login-box {
+                border: 1px solid #DBDBDB;
+                background: rgb(244, 244, 244);
+                padding: 35px 81px 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                margin: 0 0 10px 0;
+            
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    
+                }
+                .profile-photo {
+                    border-radius: 50%;
+                    max-width: 12vh;
+                    margin: 20px 0 35px;
+                    overflow: hidden;
+                }
+                .login-button {
+                    font-size: 14px;
+                    font-weight: bold;
+                    background: #0095F6;
+                    color: white;
+                    margin-bottom: 10px;
+                    border: 3px solid #0095F6;
+                    border-radius: 5px;
+                    width: 106%;
+                    height: 4vh;
+                }
+                .removeacc-button {
+                    font-size: 14px;
+                    font-weight: bold;
+                    background: #f3f1f1;
+                    color: #0095F6;
+                    margin-bottom: 10px;
+                    border: 3px solid #f3f1f1;
+                    border-radius: 5px;
+                    width: 106%;
+                    height: 4vh;
+                }
             }
-            .profile-photo {
-                max-width: 7%;
-                border-radius: 50%;
 
+            .signup-box {
+                border: 1px solid #DBDBDB;
+                padding: 30px 90px 25px;
+                background: rgb(244, 244, 244);
+
+                .not-user {
+                    font-size: 14px;
+                    color: grey;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: row;
+                }
+
+                .user-option {
+                    color: grey;
+
+                    .switch-acc{
+                        font-size: 14px;
+                        color: #0095F6;
+                        font-weight: bold;
+                    }
+
+                    .remove-acc {
+                        font-size: 14px;
+                        color: #0095F6;
+                        font-weight: bold;
+                    }
+                    
+                }
             }
-            .login-button {
 
-            }
-            .removeacc-button {
+            .getapp-box {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100vh;
+                margin-top: 20px;
+                
+                .get-app {
+                    font-size: 14px;
+                    margin-bottom: 20px;
+                }
 
+                .download {
+        
+                    .appstore-logo {
+                        width: 20vh;
+                        margin: 0 3px 0 0;
+                    }
+                    
+                    .googleplay-logo {
+                        width: 20vh;
+                        margin: 0 0 0 3px;
+                    }
+                }
             }
         }
-
-        .signup-box {
-            
-            .switchacc-text {
-
-            }
-            .signup-text {
-
-            }
-        }
-
-        .getapp-box {
-
-            .appstore-logo {
-
-            }
-            
-            .googleplay-logo {
-            
-            }
-        }
-    }
-
-    .list-footer {
-            
     }
 }
