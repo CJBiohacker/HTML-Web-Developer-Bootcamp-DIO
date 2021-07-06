@@ -33,7 +33,6 @@ var anoAtual = 2021;
 console.log(`Ano em que iniciou a Pandemia: ${anoPandemia}.`);
 console.log(anoAtual - anoNasc);
 
-
 // Arrays
 
 // Criando uma Array
@@ -42,34 +41,59 @@ var listaComida = ['Pizza', 'Kebab', 'Lasanha', 'Strogonoff', 'Risoto', 'Salmão
 console.log(`Lista de Comida: ${listaComida}`);
 console.log(`Quarto item da lista: ${listaComida[3]}`);
 
-console.log(`Nº de elementos: ${listaComida.length}`);          // Imprime no console a extensão da Array.
+console.log(`Nº de elementos: ${listaComida.length}`);                      // Imprime no console a extensão da Array.
 
-listaComida.push('Hot Filadelfia');                             // Adiciona um elemento no final da Array. Neste caso adicionou o Hot Filadelfia.
+listaComida.push('Hot Filadelfia');                                         // Adiciona um elemento no final da Array. Neste caso adicionou o Hot Filadelfia.
 console.log(`${listaComida[listaComida.length - 1]} foi
 adicionado à Lista de Comida.`);
 console.log(`Lista de Comida (atualizada): ${listaComida}`);
 
 console.log(`${listaComida[listaComida.length - 1]} foi
 removido da Lista de Comida.`);
-listaComida.pop();                                              // Remove um elemento do final da Array. Neste caso removeu o Hot Filadelfia.
+listaComida.pop();                                                          // Remove um elemento do final da Array. Neste caso removeu o Hot Filadelfia.
 console.log(`Lista de Comida (atualizada): ${listaComida}`);
 
 console.log(`${listaComida[0]} foi
 removido da Lista de Comida.`);
-listaComida.shift();                                            // Remove um elemento do início da Array. Neste caso removeu a Pizza.
+listaComida.shift();                                                        // Remove um elemento do início da Array. Neste caso removeu a Pizza.
 console.log(`Lista de Comida (atualizada): ${listaComida}`);
 
-listaComida.unshift('Omelete');                                 // Adiciona um elemento do início da Array. Neste caso removeu a Pizza.
+listaComida.unshift('Omelete');                                             // Adiciona um elemento do início da Array. Neste caso removeu a Pizza.
 console.log(`${listaComida[0]} foi
 adicionado da Lista de Comida.`);
 console.log(`Lista de Comida (atualizada): ${listaComida}`);
 
 console.log(`Lista de Comida na ordem reversa:                  
-${listaComida.reverse()}`);                                     // Imprime a Array na ordem reversa.
+${listaComida.reverse()}`);                                                 // Imprime a Array na ordem reversa.
 
-console.log(listaComida);                                       // Imprime a Array em representação de Lista/Objeto.
-console.log(listaComida.toString());                            // Imprime a Array em representação de Strings através do método 'toString'.
-console.log(listaComida.toString()[2]);                         // Imprime a representação de string da ordem(índice 2 = 3º) do caractere selecionado de toda Array.
-console.log(listaComida.toString()[500]);                       // Mesmo caso anterior, porém com um índice além da extensão do Array. Retornando um 'undefined' no console.
+console.log(listaComida);                                                   // Imprime a Array em representação de Lista/Objeto.
+console.log(listaComida.toString());                                        // Imprime a Array em representação de Strings através do método 'toString'.
+console.log(listaComida.toString()[2]);                                     // Imprime a representação de string da ordem(índice 2 = 3º) do caractere selecionado de toda Array.
+console.log(listaComida.toString()[500]);                                   // Mesmo caso anterior, porém com um índice além da extensão do Array. Retornando um 'undefined' no console.
 
-listaComida.indexOf("Kebab");
+console.log(listaComida.indexOf("Kebab"));                                  // Retorna o índice do item selecionado
+
+console.log(`Lista de Comida (atualizada): ${listaComida.join(' * ')}`);    // Define o método de concatenação entre os elementos da Array.
+console.log(`Lista de Comida (atualizada): ${listaComida.join(' <> ')}`);   // Define o método de concatenação entre os elementos da Array.
+
+// Objeto JSON ('Dicionário')
+
+// Criação de um objeto composto, neste caso, por 3 variáveis,
+var frutas = {
+    fruta: "Maçã",
+    cor: "Vermelha",
+    qtd: 2
+};
+
+console.log(`Fruta:${frutas.fruta}, Cor:${frutas.cor} e Quantidade atual:${frutas.qtd}.`);
+
+// Criação de uma Array composta de objetos como elementos.
+var listaFrutas = [
+    { nome: "Pêra", cor: "verde-claro" },
+    { nome: "Laranja", cor: "alaranjada" },
+    { nome: "Pitaia", cor: "rosa" },
+    { nome: "Limão Siciliano", cor: "amarelo" }
+];
+
+console.log(`${listaFrutas[2].nome} tem cor ${listaFrutas[2].cor}`);
+
