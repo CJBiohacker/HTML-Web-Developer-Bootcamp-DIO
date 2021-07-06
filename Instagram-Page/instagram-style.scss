@@ -15,7 +15,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction:column;
 
     .instagram-page {
         display: flex; // Organiza os itens do "container" em sequência/fila/linha.
@@ -31,14 +32,13 @@ body {
             width: 45%;
 
             .phone {
-                height: 45rem;
-                
+                height: 48rem;
             }
         }
         .side-box {
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-be;
             flex-direction: column;
             width: 50%;
 
@@ -50,12 +50,11 @@ body {
                 align-items: center;
                 justify-content: space-around;
                 flex-direction: column;
-                margin: 0 0 10px 0;
+                margin: 10px;
             
                 .logo {
                     display: flex;
                     align-items: center;
-                    
                 }
                 .profile-photo {
                     border-radius: 50%;
@@ -73,6 +72,9 @@ body {
                     border-radius: 5px;
                     width: 106%;
                     height: 4vh;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
                 .removeacc-button {
                     font-size: 14px;
@@ -84,12 +86,14 @@ body {
                     border-radius: 5px;
                     width: 106%;
                     height: 4vh;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
-
             .signup-box {
                 border: 1px solid #DBDBDB;
-                padding: 30px 90px 25px;
+                padding: 30px 92px 25px;
                 background: rgb(244, 244, 244);
 
                 .not-user {
@@ -100,7 +104,6 @@ body {
                     justify-content: center;
                     flex-direction: row;
                 }
-
                 .user-option {
                     color: grey;
 
@@ -109,20 +112,16 @@ body {
                         color: #0095F6;
                         font-weight: bold;
                     }
-
                     .remove-acc {
                         font-size: 14px;
                         color: #0095F6;
                         font-weight: bold;
                     }
-                    
                 }
             }
-
             .getapp-box {
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 flex-direction: column;
                 width: 100vh;
                 margin-top: 20px;
@@ -131,14 +130,11 @@ body {
                     font-size: 14px;
                     margin-bottom: 20px;
                 }
-
                 .download {
-        
                     .appstore-logo {
                         width: 20vh;
                         margin: 0 3px 0 0;
-                    }
-                    
+                    }                  
                     .googleplay-logo {
                         width: 20vh;
                         margin: 0 0 0 3px;
@@ -146,5 +142,35 @@ body {
                 }
             }
         }
+    }
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .instagram-page {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-page {
+        width: 90%;
+    }
+
+    .phone-box {
+        display: none;
+    }
+
+    .side-box {
+        width: 100%;
+    }
+    
+    .signup-box, .login-box {
+        border: 1px solid transparent;
     }
 }
