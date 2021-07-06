@@ -10,6 +10,9 @@
   line-height: 18px;
 }
 
+body {
+  max-width: 100%;
+}
 body .instagram-page .phone-box .phone {
   max-width: 45%;
   margin-left: 15%;
