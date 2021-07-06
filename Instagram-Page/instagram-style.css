@@ -100,7 +100,6 @@ body .instagram-page .side-box .signup-box .not-user {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
 }
 body .instagram-page .side-box .signup-box .user-option {
   color: grey;
@@ -135,7 +134,7 @@ body .instagram-page .side-box .getapp-box .download .googleplay-logo {
   margin: 0 0 0 3px;
 }
 
-/* Media Queries */
+/* media queries */
 @media (max-width: 1024px) {
   .instagram-page {
     width: 90%;
