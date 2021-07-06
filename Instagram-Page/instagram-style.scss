@@ -1,4 +1,4 @@
-* { // Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc.
+* {     // Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc.
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
     line-height: 18px;
 }
 
-body {
+body {     // Estilização e formatação geral do corpo da página. Organizado em uma coluna conforme modelo do Instagram.
     max-width: 100%;
     min-height: 100vh;
     background:#f3f1f1;
@@ -18,8 +18,8 @@ body {
     align-items: center;
     flex-direction:column;
 
-    .instagram-page {
-        display: flex; // Organiza os itens do "container" em sequência/fila/linha.
+    .instagram-page {     // Estilização e formatação da imagem do celular no lado esquerdo.
+        display: flex;
         align-items: center;    
         justify-content: start;
         width: 60%;
@@ -35,14 +35,14 @@ body {
                 height: 48rem;
             }
         }
-        .side-box {
+        .side-box {     // Estilização e formatação da coluna de itens do lado direito (Caixa de Login, Caixa de Inscrição e Caixa de Download do App.  
             display: flex;
             align-items: center;
             justify-content: space-be;
             flex-direction: column;
             width: 50%;
 
-            .login-box {
+            .login-box {     // Estilização e formatação do logotipo, foto de perfil e botões de login e remover conta.
                 border: 1px solid #DBDBDB;
                 background: rgb(244, 244, 244);
                 padding: 35px 81px 35px;
@@ -72,7 +72,7 @@ body {
                     border-radius: 5px;
                     width: 106%;
                     height: 4vh;
-                    &:hover{
+                    &:hover{     // Adição da função de "apontar" quando o cursor do mouse passar no botão de login.
                         cursor: pointer;
                     }
                 }
@@ -86,12 +86,12 @@ body {
                     border-radius: 5px;
                     width: 106%;
                     height: 4vh;
-                    &:hover{
+                    &:hover{     // Adição da função de "apontar" quando o cursor do mouse passar por cima do botão de remover conta.
                         cursor: pointer;
                     }
                 }
             }
-            .signup-box {
+            .signup-box {     // Estilização e formatação da caixa de trocar ou remover conta.
                 border: 1px solid #DBDBDB;
                 padding: 30px 92px 25px;
                 background: rgb(244, 244, 244);
@@ -102,7 +102,6 @@ body {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    flex-direction: row;
                 }
                 .user-option {
                     color: grey;
@@ -119,7 +118,7 @@ body {
                     }
                 }
             }
-            .getapp-box {
+            .getapp-box {     // Estilização e formatação da caixa de download do aplicativo.
                 display: flex;
                 align-items: center;
                 flex-direction: column;
