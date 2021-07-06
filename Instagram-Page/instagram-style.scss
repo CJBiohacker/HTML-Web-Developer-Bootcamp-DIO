@@ -1,0 +1,65 @@
+* { /* Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc. */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+body {
+    .instagram-page {
+
+        .phone-box {
+
+            .phone {
+                max-width: 45%;
+                margin-left: 15%;
+            }
+        }
+
+        .login-box {
+
+            .logo {
+                max-width: 12%;
+            }
+            .profile-photo {
+                max-width: 7%;
+                border-radius: 50%;
+
+            }
+            .login-button {
+
+            }
+            .removeacc-button {
+
+            }
+        }
+
+        .signup-box {
+            
+            .switchacc-text {
+
+            }
+            .signup-text {
+
+            }
+        }
+
+        .getapp-box {
+
+            .appstore-logo {
+
+            }
+            
+            .googleplay-logo {
+            
+            }
+        }
+    }
+
+    .list-footer {
+            
+    }
+}

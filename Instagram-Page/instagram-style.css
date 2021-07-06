@@ -1,0 +1,25 @@
+@charset "UTF-8";
+* {
+  /* Estilização geral de base para a página. Inclui-se nessa cascata espaçamento, margens, fonte e tamanho, etc. */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+body .instagram-page .phone-box .phone {
+  max-width: 45%;
+  margin-left: 15%;
+}
+body .instagram-page .login-box .logo {
+  max-width: 12%;
+}
+body .instagram-page .login-box .profile-photo {
+  max-width: 7%;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=instagram-style.css.map */
