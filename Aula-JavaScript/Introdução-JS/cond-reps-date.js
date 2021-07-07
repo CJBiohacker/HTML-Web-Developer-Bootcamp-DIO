@@ -10,9 +10,20 @@
 //     alert("VAI PRA CASA, MOLEQUE !!!")
 // }
 
+// Laços de Repetição (while...) (do...while) (for...)
+
 var count = 0;
 
+// Laço de repetição 'while'. Enquanto o 'count' for menor do que 5, imprime no console o valor atual do 'count' e soma +1 ao 'count' atual, repetindo o loop.
 while (count < 5) {
-    console.log(count);
-    count = count++
+    console.log(count)
+    count++
 };
+
+count = 0;  // Atribui o valor 0 ao 'count'.                                             
+
+// Laço de repetição 'do...while'. Imprime no console o valor atual do 'count' e soma +1 ao 'count' atual. Enquanto o 'count' for menor do que 5 repete o loop. 
+do {
+    console.log(count)
+    count++
+} while (count < 5);
