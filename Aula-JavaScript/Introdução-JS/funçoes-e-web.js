@@ -52,3 +52,11 @@ function alertTextUndo(elemento) {
     // document.getElementById("changed-text").innerHTML = "Passe o cursor aqui"
     elemento.innerHTML = "Passe o cursor aqui"
 }
+
+function pageLoaded() {
+    alert("A página foi carregada !")
+}
+
+function selectChange(elemento) {
+    console.log(elemento.value)
+}

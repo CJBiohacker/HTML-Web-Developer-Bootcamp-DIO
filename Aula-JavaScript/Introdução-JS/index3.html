@@ -9,7 +9,7 @@
     <title>Aula JavaScript 2</title>
 </head>
 
-<body>
+<body onload="pageLoaded()">
     <h1>Funções e aplicação em paginas da Web.</h1>
 
     <button type="button" onclick="clickMsg()">Clique p/ Msg</button>
@@ -21,7 +21,11 @@
     <p onmouseover="alertTextChange(this)" onmouseout="alertTextUndo(this)">Passe o cursor aqui</p>
     <span onmouseover="alertTextChange(this)" onmouseout="alertTextUndo(this)">Passe o cursor aqui</span>
     <p id="click-reponse"></p>
-
+    <select onchange="selectChange(this)" name="Balaclava 137">
+        <option value="1">Opção 1</option>
+        <option value="3">Opção 3</option>
+        <option value="7">Opção 7</option>
+    </select>
 </body>
 
 </html>
