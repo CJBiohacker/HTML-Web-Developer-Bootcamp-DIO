@@ -54,11 +54,3 @@ console.log(`${notas10} nota(s) de R$ 10,00`)
 console.log(`${notas5} nota(s) de R$ 5,00`)
 console.log(`${notas2} nota(s) de R$ 2,00`)
 console.log(`${notas1} nota(s) de R$ 1,00`)
-
-
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-console.log(e);
-console.log(f);
