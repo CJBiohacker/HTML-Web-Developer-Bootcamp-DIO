@@ -23,7 +23,7 @@ var positivos = numero.filter(pos).length;          // Variável que significa o
 var negativos = numero.filter(neg).length;          // Variável que significa o chamado da quantidade de elementos da Array que se enquadram no filtro de número negativo.
 
 console.log(`${pares} valor(es) par(es)`);          // Imprime no console a quantidade de números pares.
-console.log(`${impares} valor(es) ímpar(es)`);        // Imprime no console a quantidade de números ímpares.
+console.log(`${impares} valor(es) ímpar(es)`);      // Imprime no console a quantidade de números ímpares.
 
 console.log(`${positivos} valor(es) positivo(s)`);  // Imprime no console a quantidade de números positivos.
 console.log(`${negativos} valor(es) negativo(s)`);  // Imprime no console a quantidade de números negativos.
