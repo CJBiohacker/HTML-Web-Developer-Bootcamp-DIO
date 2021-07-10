@@ -1,19 +1,69 @@
+// Declaração de variáveis p/ Estilização (SCSS)
+$corVermelha: #e50914;
+$corPreta: #141414;
+$corBranca: #FFFFFF;
+$fonteMenu: Helvetica, sans-serif;
+
+// Define a padronização do estilo geral da página "resetado". 
 *{
-    background-color: rgb(27, 27, 27);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; // Limita a resolução dos elementos conforme o tamanho de borda da caixa.
 }
 
 body {
 
     .header-menu {
-
-        #netflix-logo {
-
-        }
-        .navigation {
-
-        }
-    }
-    .wallpaper {
+        border: 1px solid yellow;
         
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: center;
+            background:$corPreta;
+            border: 1px solid white;
+            
+            .netflix-logo {
+                margin: 22px 0 0 60px;
+                border: 1px solid black;
+                width: 95px;
+            }
+
+            > a {   // Estilização exclusiva das tags âncoras dentro da tag nav.
+                font-family: $fonteMenu;
+                font-size: 14px;
+                color: $corBranca;
+                margin: 0 8.5px 0;  // Define o comprimento da margem, criando espaçamento entre as âncoras.
+                text-decoration: none;  // Neste caso remove a decoração sublinhada da âncora. (Define decoração de texto)
+            }
+
+            .profile-navigation {
+                display: flex;
+                align-items: center;
+
+                #notfication {
+
+                }
+
+                #profile-menu {
+                    
+                }
+
+                #search-box {
+                    background-color: $corPreta;
+                    font-size: 12px;
+                    color: $corBranca
+    
+                }
+            } 
+        }
+
+        .wallpaper {
+            border: 1px solid black;
+            width: 1426px;
+            height: 737px;
+        
+        }
     }
 }
