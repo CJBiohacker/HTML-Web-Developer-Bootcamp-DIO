@@ -33,10 +33,10 @@ if (valor >= 100) {                    // 576 >= 100 ==> TRUE
                     notas5             // 6/5 = 1,2 ==> arredondando pra 1
                 } else {
                     if (e >= 2) {      // 1 >= 2 ==> FALSE
-                        notas2         //
+                        notas2         // 1 / 2 ==> arredondando pra 0
                     } else {
-                        if (f >= 1) {  // 1 >= 1 
-                            notas1     //
+                        if (f >= 1) {  // 1 >= 1 ==> TRUE 
+                            notas1     // 1 / 1 ==> arredondando pra 1
                         }
                     }
                 }
