@@ -14,19 +14,16 @@ $fonteMenu: Helvetica, sans-serif;
 body {
 
     .header-menu {
-        border: 1px solid yellow;
         
         .navigation {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-items: center;
+            justify-content: left;          // Justifica o(s) conteúdo(s) no eixo X(horizontal).
+            align-items: center;            // Alinha o(s) item(s) no eixo Y(vertical).
             background:$corPreta;
-            border: 1px solid white;
+            height: 69px;
             
             .netflix-logo {
-                margin: 22px 0 0 60px;
-                border: 1px solid black;
+                margin: 0 43px 0 60px;   
                 width: 95px;
             }
 
@@ -37,26 +34,6 @@ body {
                 margin: 0 8.5px 0;  // Define o comprimento da margem, criando espaçamento entre as âncoras.
                 text-decoration: none;  // Neste caso remove a decoração sublinhada da âncora. (Define decoração de texto)
             }
-
-            .profile-navigation {
-                display: flex;
-                align-items: center;
-
-                #notfication {
-
-                }
-
-                #profile-menu {
-                    
-                }
-
-                #search-box {
-                    background-color: $corPreta;
-                    font-size: 12px;
-                    color: $corBranca
-    
-                }
-            } 
         }
 
         .wallpaper {
