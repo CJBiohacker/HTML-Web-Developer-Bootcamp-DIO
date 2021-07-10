@@ -1,19 +1,29 @@
-numero = Array(5);
+const numero = [-5, 0, -3, -4, 12];
 
-numero[0] = -5;
-numero[1] = 0;
-numero[2] = -3;
-numero[3] = -4;
-numero[4] = 12;
+// Funções que definem se o elemento do Array é par ou ímpar, baseado no cálculo do módulo da divisão.
+function par(value) {
+    return (value % 2) == 0;
+}
+function impar(value) {
+    return ((value % 2) != 0);
+}
 
-pares = numero.filter(par => numero[] % 2 = 0);
-impares = numero.filter(ímpar => numero[] % 2 != 0);
+// Funções que definem se o elemento do Array é positivo ou negativo, baseado no sinal do elemento.
+function pos(value) {
+    return value > 0;
+}
+function neg(value) {
+    return value < 0;
+}
 
-positivos = numero.filter(positivo => numero.length > 0);
-negativos = numero.filter(negativo => numero.length < 0);
+var pares = numero.filter(par).length;              // Variável que significa o chamado da quantidade de elementos da Array que se enquadram no filtro de número par.
+var impares = numero.filter(impar).length;          // Variável que significa o chamado da quantidade de elementos da Array que se enquadram no filtro de número ímpar.
 
-print(pares.length + " valor(es) par(es)");
-print(impares.length + " valor(es) impar(es)");
+var positivos = numero.filter(pos).length;          // Variável que significa o chamado da quantidade de elementos da Array que se enquadram no filtro de número positivo.
+var negativos = numero.filter(neg).length;          // Variável que significa o chamado da quantidade de elementos da Array que se enquadram no filtro de número negativo.
 
-print(positivos.length + " valor(es) positivo(s)");
-print(negativos.length + " valor(es) negativo(s)");
+console.log(`${pares} valor(es) par(es)`);          // Imprime no console a quantidade de números pares.
+console.log(`${impares} valor(es) par(es)`);        // Imprime no console a quantidade de números ímpares.
+
+console.log(`${positivos} valor(es) positivo(s)`);  // Imprime no console a quantidade de números positivos.
+console.log(`${negativos} valor(es) negativo(s)`);  // Imprime no console a quantidade de números negativos.
