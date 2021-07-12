@@ -1,6 +1,6 @@
 // Funções e aplicação nas páginas Web
 
-// O comando 'funcion' monta uma função baseada em parâmetros/variáveis. Dentro das 'chaves {}' fica descrição do que a função faz e/ou como opera baseada nos parâmetros.
+// O comando 'function' monta uma função baseada em parâmetros/variáveis. Dentro das 'chaves {}' fica descrição do que a função faz e/ou como opera baseada nos parâmetros.
 // No exemplo abaixo temos uma função de soma entre 2 números. Ambos são declarados como parâmetros da função e ao "chamar" a função 'soma', ela retorna a soma entre os 2 números (que devem ser identificados pelo programador).
 function soma(n1, n2) {
     return n1 + n2;
