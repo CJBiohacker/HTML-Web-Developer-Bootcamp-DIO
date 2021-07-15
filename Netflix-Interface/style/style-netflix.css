@@ -5,11 +5,11 @@
 }
 
 body .header-menu .navigation {
+  background: #141414;
+  height: 69px;
   display: flex;
   justify-content: left;
   align-items: center;
-  background: #141414;
-  height: 69px;
 }
 body .header-menu .navigation .netflix-logo {
   margin: 0 43px 0 60px;
@@ -47,7 +47,10 @@ body main .main-movie .navigation > div > button {
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: 0.25s ease-in-out;
+  transition: 0.25s ease all;
+}
+body main .main-movie .navigation > div > button > i {
+  margin-right: 12px;
 }
 body main .main-movie .navigation > div .play-watch {
   margin-right: 5px;
