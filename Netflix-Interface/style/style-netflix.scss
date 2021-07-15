@@ -35,12 +35,35 @@ body {
                 text-decoration: none;  // Neste caso remove a decoração sublinhada da âncora. (Define decoração de texto)
             }
         }
+    }
 
-        .wallpaper {
-            border: 1px solid black;
-            width: 1426px;
-            height: 737px;
-        
+    main {
+
+        .main-movie {
+            border: 1px solid $corVermelha;
+            background: url('../img/The\ Witcher\ 3\ Wild\ Hunt\ Papel\ de\ Parede\ HD\ Plano\ de\ Fundo\ 1920x1080.jpeg');
+            background-size: cover;
+            height: 735px;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;      
+
+            .navigation {
+                
+
+                .title {
+                    font: $fonteMenu;
+                    color: $corBranca;
+                    
+                }
+
+                .description {
+                    font: $fonteMenu;
+                    color: $corBranca;
+                }
+
+            }
+
         }
     }
 }
