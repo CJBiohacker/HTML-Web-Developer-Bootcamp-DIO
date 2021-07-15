@@ -3,6 +3,7 @@ $corVermelha: #e50914;
 $corPreta: #141414;
 $corBranca: #FFFFFF;
 $fonteMenu: Helvetica, sans-serif;
+$fonteDesc:  'Special Elite', cursive;
 
 // Define a padronização do estilo geral da página "resetado". 
 *{
@@ -40,30 +41,58 @@ body {
     main {
 
         .main-movie {
-            border: 1px solid $corVermelha;
-            background: url('../img/The\ Witcher\ 3\ Wild\ Hunt\ Papel\ de\ Parede\ HD\ Plano\ de\ Fundo\ 1920x1080.jpeg');
+            background: url('../img/the-witcher-3-wallpaper.png');      // Define o preenchimento do background com uma imagem.
             background-size: cover;
             height: 735px;
+            // As 3 propriedades abaixo organizam 
             display: flex;
             flex-direction: column;
-            justify-content:center;      
+            justify-content:center;
+            // border: 1px solid $corVermelha;
 
-            .navigation {
-                
+            .navigation {  
+                margin-left: 57px;
+                // border: 1px solid $corVermelha;
 
-                .title {
-                    font: $fonteMenu;
-                    color: $corBranca;
-                    
+                .title-logo {
+                    height: 30vh;
+                    // border: 1px solid $corVermelha;
                 }
 
                 .description {
-                    font: $fonteMenu;
+                    font: 20px $fonteDesc;
                     color: $corBranca;
+                    margin: 28px 880px 28px 0;
+                    // border: 1px solid $corVermelha;
                 }
 
-            }
+                > div {
 
+                    > button {
+                        font: 16px $fonteDesc;
+                        padding: 15px;
+                        border-radius: 5px;
+                        border: none;
+                        cursor: pointer;               // Transforma o cursor do mouse em 'point' toda vez que passar por cima dos botões. 
+                        transition: 0.25s ease-in-out; // Aplica um delay de transição ('ida e volta') entre as propriedades naturais e estilizadas dos botões. 
+                    }
+
+                    .play-watch{
+                        margin-right: 5px;
+                        &:hover {       // Aplica um filtro de redução do brilho quando o cursor passa em cima do botão 'Jogar agora'.
+                            filter: brightness(0.7);
+                        }
+                    }
+
+                    .more-info {
+                        color: white ;
+                        background: rgba(rgb(211, 208, 208), 0.5);
+                        &:hover {       // Aplica um filtro de redução do brilho quando o cursor passa em cima do botão 'Mais informações'.
+                            filter: brightness(0.7);
+                        }
+                    }
+                }
+            }
         }
     }
 }

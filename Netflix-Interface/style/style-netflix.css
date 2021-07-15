@@ -23,21 +23,44 @@ body .header-menu .navigation > a {
   text-decoration: none;
 }
 body main .main-movie {
-  border: 1px solid #e50914;
-  background: url("../img/The Witcher 3 Wild Hunt Papel de Parede HD Plano de Fundo 1920x1080.jpeg");
+  background: url("../img/the-witcher-3-wallpaper.png");
   background-size: cover;
   height: 735px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body main .main-movie .navigation .title {
-  font: Helvetica, sans-serif;
-  color: #FFFFFF;
+body main .main-movie .navigation {
+  margin-left: 57px;
+}
+body main .main-movie .navigation .title-logo {
+  height: 30vh;
 }
 body main .main-movie .navigation .description {
-  font: Helvetica, sans-serif;
+  font: 20px "Special Elite", cursive;
   color: #FFFFFF;
+  margin: 28px 880px 28px 0;
+}
+body main .main-movie .navigation > div > button {
+  font: 16px "Special Elite", cursive;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+body main .main-movie .navigation > div .play-watch {
+  margin-right: 5px;
+}
+body main .main-movie .navigation > div .play-watch:hover {
+  filter: brightness(0.7);
+}
+body main .main-movie .navigation > div .more-info {
+  color: white;
+  background: rgba(211, 208, 208, 0.5);
+}
+body main .main-movie .navigation > div .more-info:hover {
+  filter: brightness(0.7);
 }
 
 /*# sourceMappingURL=style-netflix.css.map */
