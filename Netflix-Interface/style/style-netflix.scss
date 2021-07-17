@@ -31,7 +31,7 @@ body {
             }
 
             > a {   // Estilização exclusiva das tags âncoras dentro da tag nav.
-                font-family: $fonteMenu;
+                font-family: $fonteDesc;
                 font-size: 14px;
                 color: $corBranca;
                 margin: 0 8.5px 0;  // Define o comprimento da margem, criando espaçamento entre as âncoras.
@@ -45,7 +45,7 @@ body {
         .main-movie {
             background: url('../img/the-witcher-3-wallpaper.png');      // Define o preenchimento do background com uma imagem.
             background-size: cover;
-            height: 735px;
+            height: 725px;
 
             display: flex;
             flex-direction: column;
@@ -97,6 +97,27 @@ body {
                             filter: brightness(0.7);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .carrossel-jogos {
+        background:$corPreta;
+
+        #Jogos {
+            font: 32px $fonteDesc;
+            color: $corBranca;
+            margin: 5px 0 $corPreta;
+        }
+        .owl-carousel owl-theme {
+
+            .item {
+
+                .telajogo {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
                 }
             }
         }
