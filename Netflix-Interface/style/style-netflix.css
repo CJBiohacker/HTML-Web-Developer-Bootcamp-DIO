@@ -4,18 +4,18 @@
   box-sizing: border-box;
 }
 
-body .header-menu .navigation {
+body .header-menu .container {
   background: #141414;
   height: 69px;
   display: flex;
   justify-content: left;
   align-items: center;
 }
-body .header-menu .navigation .netflix-logo {
+body .header-menu .container .netflix-logo {
   margin: 0 43px 0 60px;
   width: 95px;
 }
-body .header-menu .navigation > a {
+body .header-menu .container > a {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   color: #FFFFFF;
@@ -30,18 +30,19 @@ body main .main-movie {
   flex-direction: column;
   justify-content: center;
 }
-body main .main-movie .navigation {
+body main .main-movie .container {
   margin-left: 57px;
 }
-body main .main-movie .navigation .title-logo {
+body main .main-movie .container .title-logo {
   height: 30vh;
 }
-body main .main-movie .navigation .description {
+body main .main-movie .container .description {
   font: 20px "Special Elite", cursive;
   color: #FFFFFF;
-  margin: 28px 880px 28px 0;
+  width: 50%;
+  margin: 28px 0 28px 0;
 }
-body main .main-movie .navigation > div > button {
+body main .main-movie .container > div > button {
   font: 16px "Special Elite", cursive;
   padding: 15px;
   border-radius: 5px;
@@ -49,20 +50,20 @@ body main .main-movie .navigation > div > button {
   cursor: pointer;
   transition: 0.25s ease all;
 }
-body main .main-movie .navigation > div > button > i {
+body main .main-movie .container > div > button > i {
   margin-right: 12px;
 }
-body main .main-movie .navigation > div .play-watch {
+body main .main-movie .container > div .play-watch {
   margin-right: 5px;
 }
-body main .main-movie .navigation > div .play-watch:hover {
+body main .main-movie .container > div .play-watch:hover {
   filter: brightness(0.7);
 }
-body main .main-movie .navigation > div .more-info {
+body main .main-movie .container > div .more-info {
   color: white;
   background: rgba(211, 208, 208, 0.5);
 }
-body main .main-movie .navigation > div .more-info:hover {
+body main .main-movie .container > div .more-info:hover {
   filter: brightness(0.7);
 }
 
