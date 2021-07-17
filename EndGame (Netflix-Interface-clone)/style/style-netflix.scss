@@ -24,7 +24,6 @@ body {
             justify-content: left;          // Justifica o(s) conteúdo(s) no eixo X(horizontal).
             align-items: center;            // Alinha o(s) item(s) no eixo Y(vertical).
 
-            
             .netflix-logo {
                 margin: 0 43px 0 60px;   
                 width: 95px;
@@ -36,6 +35,10 @@ body {
                 color: $corBranca;
                 margin: 0 8.5px 0;  // Define o comprimento da margem, criando espaçamento entre as âncoras.
                 text-decoration: none;  // Neste caso remove a decoração sublinhada da âncora. (Define decoração de texto)
+                
+                &:hover {       // Aplica um filtro de redução do brilho quando o cursor passa em cima do botão 'Jogar agora'.
+                    filter: brightness(0.7);
+                }
             }
         }
     }
@@ -43,9 +46,9 @@ body {
     main {
 
         .main-movie {
-            background: url('../img/the-witcher-3-wallpaper.png');      // Define o preenchimento do background com uma imagem.
+            background: url('../img/the-witcher-3-wallpaper-1080p.svg');      // Define o preenchimento do background com uma imagem.
             background-size: cover;
-            height: 725px;
+            height: 100%;
 
             display: flex;
             flex-direction: column;
@@ -54,10 +57,13 @@ body {
 
             .container {  
                 margin-left: 57px;
+                margin-top: 20.5px;
+                margin-bottom: 20.5px;
                 // border: 1px solid $corVermelha;
 
                 .title-logo {
                     height: 30vh;
+                    margin-top: 15px;
                     // border: 1px solid $corVermelha;
                 }
 
@@ -65,7 +71,7 @@ body {
                     font: 20px $fonteDesc;
                     color: $corBranca;
                     width: 50%; 
-                    margin: 28px 0 28px 0;
+                    margin: 0 0 20px;
                     // border: 1px solid $corVermelha;
                 }
 
@@ -73,12 +79,17 @@ body {
 
                     > button {
                         font: 16px $fonteDesc;
+                        font-weight: bolder;
                         padding: 15px;
                         border-radius: 5px;
                         border: none;
                         cursor: pointer;               // Transforma o cursor do mouse em 'point' toda vez que passar por cima dos botões. 
-                        transition: 0.25s ease all; // Aplica um delay de transição ('ida e volta') entre as propriedades naturais e estilizadas dos botões. 
-                        > i {
+                        transition: 0.25s ease all;    // Aplica um delay de transição ('ida e volta') entre as propriedades naturais e estilizadas dos botões. 
+                       
+                        a {
+                            text-decoration: none;
+                        }
+                        i {
                             margin-right: 12px;
                         }
                     }
@@ -88,30 +99,36 @@ body {
                         &:hover {       // Aplica um filtro de redução do brilho quando o cursor passa em cima do botão 'Jogar agora'.
                             filter: brightness(0.7);
                         }
+                        .anchor-play {
+                            color: $corPreta;
+                        }
                     }
 
                     .more-info {
                         color: white ;
-                        background: rgba(rgb(211, 208, 208), 0.5);
+                        background: rgba(#4D4D4D, 0.5);
+                        margin-bottom: 10px;
                         &:hover {       // Aplica um filtro de redução do brilho quando o cursor passa em cima do botão 'Mais informações'.
                             filter: brightness(0.7);
+                        }
+                        .anchor-info {
+                            color: $corBranca;
                         }
                     }
                 }
             }
         }
     }
-
+    
     .carrossel-jogos {
         background:$corPreta;
 
         #Jogos {
             font: 32px $fonteDesc;
             color: $corBranca;
-            margin: 5px 0 $corPreta;
         }
-        .owl-carousel owl-theme {
-
+        .owl-carousel {
+            
             .item {
 
                 .telajogo {

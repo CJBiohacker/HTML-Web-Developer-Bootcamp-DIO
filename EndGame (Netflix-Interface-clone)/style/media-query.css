@@ -1,0 +1,33 @@
+/* Media Queries */
+
+/* Responsividade p/ Resoluções de Dispositivos Móveis */
+@media screen and (max-width:720px){
+    body .header-menu .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body main .main-movie .container .title-logo {
+        margin-top: 50px;
+        width: 32.5vh;
+    }
+    
+    body main .main-movie .container .description {
+        width: 80%;
+    }
+
+    body main .main-movie .container > div > button {
+        margin-top: 10px;
+        width: 245px;
+    }
+
+}
+
+/* Ajuste do texto de descrição do 'jogo' da tela principal */
+@media screen and (min-width:1000px){
+    
+    body main .main-movie .container .description {
+        width: 45%;
+    }
+
+}

@@ -22,35 +22,45 @@ body .header-menu .container > a {
   margin: 0 8.5px 0;
   text-decoration: none;
 }
+body .header-menu .container > a:hover {
+  filter: brightness(0.7);
+}
 body main .main-movie {
-  background: url("../img/the-witcher-3-wallpaper.png");
+  background: url("../img/the-witcher-3-wallpaper-1080p.svg");
   background-size: cover;
-  height: 725px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 body main .main-movie .container {
   margin-left: 57px;
+  margin-top: 20.5px;
+  margin-bottom: 20.5px;
 }
 body main .main-movie .container .title-logo {
   height: 30vh;
+  margin-top: 15px;
 }
 body main .main-movie .container .description {
   font: 20px "Special Elite", cursive;
   color: #FFFFFF;
   width: 50%;
-  margin: 28px 0 28px 0;
+  margin: 0 0 20px;
 }
 body main .main-movie .container > div > button {
   font: 16px "Special Elite", cursive;
+  font-weight: bolder;
   padding: 15px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   transition: 0.25s ease all;
 }
-body main .main-movie .container > div > button > i {
+body main .main-movie .container > div > button a {
+  text-decoration: none;
+}
+body main .main-movie .container > div > button i {
   margin-right: 12px;
 }
 body main .main-movie .container > div .play-watch {
@@ -59,12 +69,19 @@ body main .main-movie .container > div .play-watch {
 body main .main-movie .container > div .play-watch:hover {
   filter: brightness(0.7);
 }
+body main .main-movie .container > div .play-watch .anchor-play {
+  color: #141414;
+}
 body main .main-movie .container > div .more-info {
   color: white;
-  background: rgba(211, 208, 208, 0.5);
+  background: rgba(77, 77, 77, 0.5);
+  margin-bottom: 10px;
 }
 body main .main-movie .container > div .more-info:hover {
   filter: brightness(0.7);
+}
+body main .main-movie .container > div .more-info .anchor-info {
+  color: #FFFFFF;
 }
 body .carrossel-jogos {
   background: #141414;
@@ -72,9 +89,8 @@ body .carrossel-jogos {
 body .carrossel-jogos #Jogos {
   font: 32px "Special Elite", cursive;
   color: #FFFFFF;
-  margin: 5px 0 #141414;
 }
-body .carrossel-jogos .owl-carousel owl-theme .item .telajogo {
+body .carrossel-jogos .owl-carousel .item .telajogo {
   width: 100%;
   height: 100%;
   display: block;
