@@ -13,7 +13,7 @@ let direction = "right";
 // Função de criação do campo do jogo.
 function board() {
     context.fillStyle = "#e0b3ff";                                  // Define a cor de preenchimento do campo do jogo.
-    context.fillRect(15, 15, box * 40, box * 30);                   // Desenha o campo à partir da posição (15, 15) com o valor de 'box'* 55 pixels de largura e 'box'* 30 de altura.
+    context.fillRect(0, 0, box * 40, box * 30);                   // Desenha o campo à partir da posição (15, 15) com o valor de 'box'* 55 pixels de largura e 'box'* 30 de altura.
 }
 
 // Função de criação da "cobrinha".
@@ -24,18 +24,36 @@ function snake() {
     }
 }
 
-// Função geral que engloba todas as outras, que inicia o jogo.
+document.addEventListener('keydown', update);
+
+// Função que define as 'setas' do teclado como atalho pra movimento. 
+function update(event) {
+    if (event.keyCode == 37 && direction != "right") { direction = "left" };
+    if (event.keyCode == 38 && direction != "down") { direction = "up" };
+    if (event.keyCode == 39 && direction != "left") { direction = "right" };
+    if (event.keyCode == 40 && direction != "up") { direction = "down" };
+}
+
+// Função geral que engloba todas as outras e que inicia o jogo.
 function startGame() {
+
+    // Condicionais que habilitam a "cobrinha" à 'sair' do outro lado quando atingir o limite da borda.
+    if (cobra[0].x > 40 * box && direction == "right") { cobra[0].x = 0 };
+    if (cobra[0].x < 0 * box && direction == "left") { cobra[0].x = box * 30 };
+    if (cobra[0].y > 40 * box && direction == "down") { cobra[0].y = 0 };
+    if (cobra[0].y < 0 * box && direction == "up") { cobra[0].y = box * 30 };
+
     board();
     snake();
 
-    let cobraX = cobra[i].x;
-    let cobraY = cobra[i].y;
+    let cobraX = cobra[0].x;                                // Configura a posição inicial da "cobrinha" no eixo X.
+    let cobraY = cobra[0].y;                                // Configura a posição inicial da "cobrinha" no eixo Y.
 
-    if (direction == "right") { cobraX += box; }
-    if (direction == "left") { cobraX -= box; }
-    if (direction == "up") { cobraY -= box; }
-    if (direction == "down") { cobraY += box; }
+    // Condicionais que configuram o movimento da "cobrinha".
+    if (direction == "right") { cobraX += box };
+    if (direction == "left") { cobraX -= box };
+    if (direction == "up") { cobraY -= box };
+    if (direction == "down") { cobraY += box };
 
     cobra.pop();
     let newHead = {
@@ -47,5 +65,3 @@ function startGame() {
 }
 
 let jogo = setInterval(startGame, 100);
-
-startGame();
