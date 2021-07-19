@@ -25,11 +25,12 @@ function board() {
 // Função de criação da "cobrinha".
 function snake() {
     for (let i = 0; i < cobra.length; i++) {                        // Cria uma um Loop For que define a composição da "cobrinha" no campo.
-        context.fillStyle = "#001a33";                              // Define a cor de preenchimento da "cobrinha".
+        context.fillStyle = "#187426";                              // Define a cor de preenchimento da "cobrinha".
         context.fillRect(cobra[i].x, cobra[i].y, box, box);         // Desenha a "cobrinha" à partir da posição "índice atual da array 'cobra' de (x, y)" com o valor de 'box' pra largura e altura.
     }
 }
 
+// Função de aparição da comida da "cobrinha".
 function spawnFood() {
     context.fillStyle = "#e51528";
     context.fillRect(comida.x, comida.y, box, box);
@@ -57,10 +58,10 @@ function startGame() {
     }
 
     // Condicionais que habilitam a "cobrinha" à 'sair' do outro lado quando atingir o limite da borda.
-    if (cobra[0].x > 40 * box && direction == "right") { cobra[0].x = 0 };
-    if (cobra[0].x < 0 * box && direction == "left") { cobra[0].x = box * 40 };
-    if (cobra[0].y > 30 * box && direction == "down") { cobra[0].y = 0 };
-    if (cobra[0].y < 0 * box && direction == "up") { cobra[0].y = box * 30 };
+    if (cobra[0].x > 39 * box && direction == "right") { cobra[0].x = 0 };
+    if (cobra[0].x < 0 * box && direction == "left") { cobra[0].x = box * 39 };
+    if (cobra[0].y > 29 * box && direction == "down") { cobra[0].y = 0 };
+    if (cobra[0].y < 0 * box && direction == "up") { cobra[0].y = box * 29 };
 
     board();
     snake();
@@ -91,4 +92,4 @@ function startGame() {
     cobra.unshift(newHead);
 }
 
-let jogo = setInterval(startGame, 100);
+let jogo = setInterval(startGame, 85);    // Configura a velocidade de movimentação da "cobrinha".
