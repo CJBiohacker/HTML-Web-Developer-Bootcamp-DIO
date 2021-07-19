@@ -10,7 +10,7 @@ cobra[0] = {                                                        // Define a 
 
 let direction = "right";
 
-let food = {                                                        // Variável objeto 'food' que representa a comida da 'cobrinha'. É definido com uma posição randômica dentro do limite da borda da tela (configurável pelo usuário).
+let comida = {                                                        // Variável objeto 'food' que representa a comida da 'cobrinha'. É definido com uma posição randômica dentro do limite da borda da tela (configurável pelo usuário).
     x: Math.floor(Math.random() * 39 + 1) * box,
     y: Math.floor(Math.random() * 29 + 1) * box
 }
@@ -32,7 +32,7 @@ function snake() {
 
 function spawnFood() {
     context.fillStyle = "#e51528";
-    context.fillRect(food.x, food.y, box, box);
+    context.fillRect(comida.x, comida.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -50,8 +50,8 @@ function startGame() {
 
     // Condicionais que habilitam a "cobrinha" à 'sair' do outro lado quando atingir o limite da borda.
     if (cobra[0].x > 40 * box && direction == "right") { cobra[0].x = 0 };
-    if (cobra[0].x < 0 * box && direction == "left") { cobra[0].x = box * 30 };
-    if (cobra[0].y > 40 * box && direction == "down") { cobra[0].y = 0 };
+    if (cobra[0].x < 0 * box && direction == "left") { cobra[0].x = box * 40 };
+    if (cobra[0].y > 30 * box && direction == "down") { cobra[0].y = 0 };
     if (cobra[0].y < 0 * box && direction == "up") { cobra[0].y = box * 30 };
 
     board();
@@ -67,10 +67,14 @@ function startGame() {
     if (direction == "up") { cobraY -= box };
     if (direction == "down") { cobraY += box };
 
-    // Função
+    // Condicional que 'absorve' a comida pro corpo da "cobrinha".
+    if (cobraX != comida.x || cobraY != comida.y) {
+        cobra.pop();
+    } else {
+        comida.x = Math.floor(Math.random() * 29 + 1) * box
+        comida.y = Math.floor(Math.random() * 29 + 1) * box
+    }
 
-
-    cobra.pop();
     let newHead = {
         x: cobraX,
         y: cobraY
