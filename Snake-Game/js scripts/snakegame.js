@@ -10,10 +10,16 @@ cobra[0] = {                                                        // Define a 
 
 let direction = "right";
 
+let food = {                                                        // Variável objeto 'food' que representa a comida da 'cobrinha'. É definido com uma posição randômica dentro do limite da borda da tela (configurável pelo usuário).
+    x: Math.floor(Math.random() * 39 + 1) * box,
+    y: Math.floor(Math.random() * 29 + 1) * box
+}
+
+
 // Função de criação do campo do jogo.
 function board() {
     context.fillStyle = "#e0b3ff";                                  // Define a cor de preenchimento do campo do jogo.
-    context.fillRect(0, 0, box * 40, box * 30);                   // Desenha o campo à partir da posição (15, 15) com o valor de 'box'* 55 pixels de largura e 'box'* 30 de altura.
+    context.fillRect(0, 0, box * 40, box * 30);                     // Desenha o campo à partir da posição (15, 15) com o valor de 'box'* 55 pixels de largura e 'box'* 30 de altura.
 }
 
 // Função de criação da "cobrinha".
@@ -22,6 +28,11 @@ function snake() {
         context.fillStyle = "#001a33";                              // Define a cor de preenchimento da "cobrinha".
         context.fillRect(cobra[i].x, cobra[i].y, box, box);         // Desenha a "cobrinha" à partir da posição "índice atual da array 'cobra' de (x, y)" com o valor de 'box' pra largura e altura.
     }
+}
+
+function spawnFood() {
+    context.fillStyle = "#e51528";
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener('keydown', update);
@@ -45,6 +56,7 @@ function startGame() {
 
     board();
     snake();
+    spawnFood();
 
     let cobraX = cobra[0].x;                                // Configura a posição inicial da "cobrinha" no eixo X.
     let cobraY = cobra[0].y;                                // Configura a posição inicial da "cobrinha" no eixo Y.
@@ -54,6 +66,9 @@ function startGame() {
     if (direction == "left") { cobraX -= box };
     if (direction == "up") { cobraY -= box };
     if (direction == "down") { cobraY += box };
+
+    // Função
+
 
     cobra.pop();
     let newHead = {
