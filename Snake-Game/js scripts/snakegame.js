@@ -48,6 +48,14 @@ function update(event) {
 // Função geral que engloba todas as outras e que inicia o jogo.
 function startGame() {
 
+    // Loop de Repetição 'for' que define a colisão da cabeça da "cobrinha" com o próprio corpo.
+    for (let i = 1; i < cobra.length; i++) {
+        if (cobra[0].x == cobra[i].x && cobra[0].y == cobra[i].y) {
+            clearInterval(jogo)
+            alert('VOCÊ PERDEU !!! Tente outra vez !')
+        }
+    }
+
     // Condicionais que habilitam a "cobrinha" à 'sair' do outro lado quando atingir o limite da borda.
     if (cobra[0].x > 40 * box && direction == "right") { cobra[0].x = 0 };
     if (cobra[0].x < 0 * box && direction == "left") { cobra[0].x = box * 40 };
