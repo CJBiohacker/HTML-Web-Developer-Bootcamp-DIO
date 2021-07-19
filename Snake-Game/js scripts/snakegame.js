@@ -1,11 +1,14 @@
 let canvas = document.getElementById("snakeboard");                 // Criação da variável 'canvas' que representa um chamado do elemento HTML 'canvas' pelo  seu id 'snakeboard'.
 let context = canvas.getContext("2d");                              // Criação da variável 'context' que chama o método 'getContext' da variável anterior 'canvas', que representa o conceito de renderização bidimensional.
 let box = 16;                                                       // Criação da variável 'box' com um valor numérico inteiro. Este nº representa o tamanho do bloco em pixels.
+
 let cobra = []                                                      // Criação da variável 'cobra' que é uma matriz que representa a "cobrinha" do jogo.
-cobra[0] = {
+cobra[0] = {                                                        // Define a posição inicial da cobra através do primeiro elemento da Array 'cobra'.
     x: box * 16,
     y: box * 16
 }
+
+let direction = "right";
 
 // Função de criação do campo do jogo.
 function board() {
@@ -21,6 +24,28 @@ function snake() {
     }
 }
 
-board();
-snake();
+// Função geral que engloba todas as outras, que inicia o jogo.
+function startGame() {
+    board();
+    snake();
 
+    let cobraX = cobra[i].x;
+    let cobraY = cobra[i].y;
+
+    if (direction == "right") { cobraX += box; }
+    if (direction == "left") { cobraX -= box; }
+    if (direction == "up") { cobraY -= box; }
+    if (direction == "down") { cobraY += box; }
+
+    cobra.pop();
+    let newHead = {
+        x: cobraX,
+        y: cobraY
+    }
+
+    cobra.unshift(newHead);
+}
+
+let jogo = setInterval(startGame, 100);
+
+startGame();
