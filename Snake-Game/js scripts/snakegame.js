@@ -1,4 +1,4 @@
-let canvas = document.getElementById("snakeboard");                 // Criação da variável 'canvas' que representa um chamado do elemento HTML 'canvas' pelo  seu id 'snakeboard'.
+let canvas = document.getElementById("snakeboard");                 // Criação da variável 'canvas' que representa um chamado do elemento HTML '<canvas>' pelo  seu id 'snakeboard'.
 let context = canvas.getContext("2d");                              // Criação da variável 'context' que chama o método 'getContext' da variável anterior 'canvas', que representa o conceito de renderização bidimensional.
 let box = 16;                                                       // Criação da variável 'box' com um valor numérico inteiro. Este nº representa o tamanho do bloco em pixels.
 
@@ -14,7 +14,6 @@ let comida = {                                                        // Variáv
     x: Math.floor(Math.random() * 39 + 1) * box,
     y: Math.floor(Math.random() * 29 + 1) * box
 }
-
 
 // Função de criação do campo do jogo.
 function board() {
@@ -38,7 +37,7 @@ function spawnFood() {
 
 document.addEventListener('keydown', update);
 
-// Função que define as 'setas' do teclado como atalho pra movimento. 
+// Função que define as 'setas' do teclado como atalho pra movimento.
 function update(event) {
     if (event.keyCode == 37 && direction != "right") { direction = "left" };
     if (event.keyCode == 38 && direction != "down") { direction = "up" };
